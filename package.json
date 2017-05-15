@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["grunt"],
+  "author": "rockidy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockidy/gruntExam.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",

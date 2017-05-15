@@ -1,8 +1,11 @@
 module.exports = function(grunt) {
-
   // 프로젝트 환경설정.
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> \nauthor: <%=pkg.author%> \n<%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
       build: {
         src: 'src/app.js',
         dest: 'build/app.min.js'
