@@ -72,5 +72,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['jshint', 'qunit']);
 
   // 기본 작업 등록
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  //grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('default', ['qunit']);
 };

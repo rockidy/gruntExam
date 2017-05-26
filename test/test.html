@@ -6,13 +6,21 @@
   <meta name="Author" content="rockidy">
   <meta name="Keywords" content="underscore">
   <meta name="Description" content="">
-  <title>test</title>
+  <!-- Load local QUnit. -->
+  <link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css" media="screen">
+  <script src="../node_modules/requirejs/require.js" data-main="qunit_test.js"></script>
+  <script>
+    requirejs.config({
+      baseUrl:"../src",
+      paths:{
+        'qunit': '../node_modules/qunitjs/qunit/qunit'
+      }
+    });
+  </script>
+  <title>Qunit test</title>
  </head>
  <body>
-  <script type="text/javascript">
-  <!--
-
-  //-->
-  </script>
+   <div id="qunit"></div>
+   <div id="qunit-fixture">this had better work.</div>
  </body>
 </html>
