@@ -8,12 +8,21 @@
   <meta name="Description" content="">
   <!-- Load local QUnit. -->
   <link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css" media="screen">
-  <script src="../node_modules/requirejs/require.js" data-main="qunit_test.js"></script>
+  <script src="../node_modules/requirejs/require.js" data-main="test_suite.js"></script>
   <script>
     requirejs.config({
       baseUrl:"../src",
       paths:{
         'qunit': '../node_modules/qunitjs/qunit/qunit'
+      },
+      shim:{
+        'qunit': {
+          //exports: 'QUnit',
+          init: function () {
+            QUnit.config.autoload = false;
+            QUnit.config.autostart = false;
+          }
+        }
       }
     });
   </script>
